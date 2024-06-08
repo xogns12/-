@@ -1,3 +1,15 @@
+import os
+import cv2
+import numpy as np
+from tensorflow.keras.models import Model, Sequential, load_model
+from tensorflow.keras.layers import BatchNormalization, Conv2D, MaxPool2D, Activation, Dropout, Lambda, Dense, Flatten, Input
+import tensorflow as tf
+import tensorflow.keras as keras
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
+from sklearn.model_selection import train_test_split
+from tensorflow.keras import backend as k
+
 # 특정 폴더 내 이미지 파일에서 나이, 성별 정보를 추출
 # 이미지를 일정 크기로 변환한 후 배열로 저장
 image_paths = []
