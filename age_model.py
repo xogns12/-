@@ -25,8 +25,7 @@ age_model = Sequential([
     Dropout(0.25),
     Dense(256, activation='relu'),
     Dense(512, activation='relu'),
-    Dense(1, activation='linear', name='age')
-])
+    Dense(1, activation='linear', name='age')])
 opt = Adam()
 age_model.compile(loss="mse", optimizer=opt, metrics=['mae'])
 age_model.summary()
