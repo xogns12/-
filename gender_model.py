@@ -31,3 +31,4 @@ gender_model2 = Sequential([
     Dense(512, activation='relu'),
     Dense(1, activation='sigmoid', name='gender')])
 gender_model2.compile(optimizer=opt, loss='binary_crossentropy', metrics=['accuracy'])
+gender_model2.summary()
